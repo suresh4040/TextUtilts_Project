@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title%}Text Utils{% endblock %}
+
+{% block content %}
+        <!--write main content here-->
+
+{% if error %}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Welcome to TextUtils!</strong> {{error}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% else %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Welcome to TextUtils!</strong> You can modify your texts here.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endif %}
+
+<div class="container">
+<h2>Your Analyzed Text - {{purpose}} </h2>
+
+
+	<pre>{{inital_text}}</pre>
+
+		
+</div>
+
+</html>
+{% endblock %}
